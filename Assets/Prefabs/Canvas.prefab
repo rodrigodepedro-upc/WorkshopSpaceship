@@ -1388,8 +1388,8 @@ GameObject:
   - component: {fileID: 6260560080581857336}
   - component: {fileID: 1741453701635082036}
   - component: {fileID: 7482311767119580538}
-  - component: {fileID: 1049860011826965215}
   - component: {fileID: 2289904966549399152}
+  - component: {fileID: 8870433382042501930}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1499,9 +1499,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1049860011826965215}
-        m_TargetAssemblyTypeName: ReplayButton, Assembly-CSharp
-        m_MethodName: Replay
+      - m_Target: {fileID: 8870433382042501930}
+        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1511,18 +1511,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1049860011826965215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7325403668103997226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0b7bd68fd9c1a4b9fbdce9f3dd1fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2289904966549399152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,6 +1526,18 @@ MonoBehaviour:
   movement: {x: -300, y: 0}
   time: 1
   delay: 0
+--- !u!114 &8870433382042501930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325403668103997226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc013e228b2054ebae49b2a01195f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7400346947644662090
 GameObject:
   m_ObjectHideFlags: 0

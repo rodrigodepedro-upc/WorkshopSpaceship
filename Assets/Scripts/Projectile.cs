@@ -36,12 +36,17 @@ public class Projectile : MonoBehaviour
         if ((targetLayer.value & (1 << other.gameObject.layer)) == 0)
             return;
 
-        Health health = other.GetComponent<Health>();
+        Health healthOther = other.GetComponent<Health>();
 
-        if (health != null)
-            health.DealDamage(damage);
+        if (healthOther != null)
+            healthOther.DealDamage(damage);
 
-        Disable();
+        Health healthSelf = GetComponent<Health>();
+
+        if(healthSelf != null) 
+            healthSelf.DealDamage(healthSelf.MaxHealth);
+        else
+            Disable();
     }
 
     public void Disable()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// The boss's overall "structural integrity", implemented as a <see cref="Health"/>
@@ -18,6 +19,8 @@ public class BossIntegrity : Health
     [SerializeField] Health[] parts = new Health[0];
     [Tooltip("Integrity max as a fraction of the parts' combined health (0.5 = boss explodes after half their total health is dealt).")]
     [SerializeField, Range(0f, 1f)] float integrityFraction = 0.5f;
+    [Tooltip("Seconds after the boss explodes before the boss object is destroyed. Removing it stops systems that outlive it (e.g. shield regen re-enabling the shield). Should cover the longest explosion clip.")]
+    [SerializeField] float destroyDelay = 2f;
 
     bool exploded = false;
 
@@ -60,5 +63,16 @@ public class BossIntegrity : Health
 
         foreach (Ship8.ExplosionController explosion in explosions)
             explosion.StartExplosion();
+
+        // Remove the boss once its explosions have played. This also tears down
+        // components living on the boss (e.g. ShieldRegen), so the shield can't
+        // regenerate and reappear after the boss is gone.
+        StartCoroutine(DestroyAfterExplosion());
+    }
+
+    IEnumerator DestroyAfterExplosion()
+    {
+        yield return new WaitForSeconds(destroyDelay);
+        Destroy(gameObject);
     }
 }

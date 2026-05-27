@@ -796,6 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   removeParts: []
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &1701504490755114270
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +924,7 @@ MonoBehaviour:
   removeParts:
   - {fileID: 1587120121176734728}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &1704356153675434852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,13 +1546,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2397033930612205708}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.044, y: -0.712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8723192204844143029}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1492084454531374709
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1740,6 +1742,7 @@ MonoBehaviour:
   - {fileID: 730339371012109639}
   - {fileID: 5180344160049256713}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!114 &197110484532375188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,6 +2095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   removeParts: []
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &3547793053504338414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,13 +2121,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3547793053504338414}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.044, y: -0.712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7666620799798645526}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &7423330108079576160
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2322,6 +2326,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MovementCoroutine, Assembly-CSharp
+        m_MethodName: Revert
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MovementCoroutine, Assembly-CSharp
+        m_MethodName: Revert
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -2333,6 +2361,7 @@ MonoBehaviour:
   - {fileID: 225069802544340266}
   - {fileID: 2113902769096719806}
   integrityFraction: 0.75
+  destroyDelay: 0.75
 --- !u!114 &1099790067346903489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2711,6 +2740,7 @@ MonoBehaviour:
   - {fileID: 7013264789676918480}
   - {fileID: 6887398552358803600}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!114 &7547303590170178397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3132,6 +3162,7 @@ MonoBehaviour:
   removeParts:
   - {fileID: 3327102271497373539}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &4970729269670162490
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   removeParts: []
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &5943116279832385969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,6 +3581,7 @@ MonoBehaviour:
   - {fileID: 7943637662787345919}
   - {fileID: 4374166508036886375}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!114 &5646780662976679589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,6 +4575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   removeParts: []
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &7157999601219183591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4676,6 +4710,7 @@ MonoBehaviour:
   - {fileID: 6278056679976375884}
   - {fileID: 6657560544201442435}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!114 &4110421292892478002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4965,6 +5000,7 @@ MonoBehaviour:
   removeParts:
   - {fileID: 6130894443202563412}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &7943637662787345919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,6 +5458,7 @@ MonoBehaviour:
   removeParts:
   - {fileID: 7970946925804394229}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!1 &8797743118357658383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +5594,7 @@ MonoBehaviour:
   - {fileID: 88538845801263669}
   - {fileID: 1731786536285121651}
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!114 &6101045106320776406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5847,6 +5885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   removeParts: []
   childrenExplosion: []
+  destroyOnComplete: {fileID: 0}
 --- !u!114 &2113902769096719806
 MonoBehaviour:
   m_ObjectHideFlags: 0

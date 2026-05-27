@@ -11,6 +11,9 @@ namespace Ship8
         [Tooltip("Array of children that have animation for explosion and should explode by calling from parent animation clip.")]
         public ExplosionController[] childrenExplosion;
 
+        [Tooltip("Optional object destroyed once this explosion's animation finishes playing. Wire to a ship/boss root to remove it after its death explosion. Leave empty for pooled/reused explosions (e.g. bombs).")]
+        public GameObject destroyOnComplete;
+
         /*
         [Tooltip("Main parent that should be destroyed after all explosins complete. Will call in 'DestroyMainParent' function from AnimationClip")]
         public GameObject mainaParent;
@@ -36,6 +39,24 @@ namespace Ship8
             if (animator == null)
                 animator = GetComponent<Animator>();
             animator.SetBool("expl", true);
+
+            if (destroyOnComplete != null)
+                StartCoroutine(DestroyWhenComplete());
+        }
+
+        IEnumerator DestroyWhenComplete()
+        {
+            // Wait one frame for the (instant) transition out of Idle into the
+            // Explosion state so the state info below reports the explosion clip.
+            yield return null;
+
+            // The Explosion state has no exit transition, so the explosion has
+            // finished once its clip has played to the end.
+            while (animator != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+                yield return null;
+
+            if (destroyOnComplete != null)
+                Destroy(destroyOnComplete);
         }
 
         /// <summary>
