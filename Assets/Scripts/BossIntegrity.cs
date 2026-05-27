@@ -64,9 +64,8 @@ public class BossIntegrity : Health
         foreach (Ship8.ExplosionController explosion in explosions)
             explosion.StartExplosion();
 
-        // Remove the boss once its explosions have played. This also tears down
-        // components living on the boss (e.g. ShieldRegen), so the shield can't
-        // regenerate and reappear after the boss is gone.
+        // Remove the boss once its explosions have played.
+        // This also tears down components on the boss (e.g. ShieldRegen) so the shield can't regenerate and reappear after the boss is gone.
         StartCoroutine(DestroyAfterExplosion());
     }
 

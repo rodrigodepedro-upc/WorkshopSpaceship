@@ -28,10 +28,8 @@ public class ShieldAnimation : MonoBehaviour
 
     void OnDisable()
     {
-        // The shield is disabled when its health hits zero, which can interrupt
-        // the animation state before it exits — leaving isPlaying stuck true and
-        // blocking every future PlayAnimation. Re-arm here so it plays again once
-        // the shield is regenerated and re-enabled.
+        // The shield is disabled when its health hits zero, which can interrupt the animation state before it exits, leaving isPlaying stuck true and blocking every future PlayAnimation.
+        // Re-arm here so it plays again once the shield is regenerated and re-enabled.
         isPlaying = false;
     }
 

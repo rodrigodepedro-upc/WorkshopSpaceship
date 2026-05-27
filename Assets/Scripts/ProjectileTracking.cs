@@ -1,17 +1,15 @@
 using UnityEngine;
 
 /// <summary>
-/// Gently steers a Rigidbody2D-driven projectile (e.g. a launched bomb) toward a
-/// target Transform. It rotates the existing velocity a small amount each physics
-/// step while preserving its speed, so the projectile curves slightly rather than
-/// homing sharply. Keep <see cref="turnSpeed"/> low for a subtle nudge.
+/// Fa que un projectil mogut per un Rigidbody2D (p. ex. una bomba llançada) persegueixi suaument un objectiu (un Transform).
+/// A cada pas de física gira una mica la velocitat actual cap a l'objectiu mantenint la mateixa rapidesa, de manera que descriu una corba lleugera en lloc de girar de cop.
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class ProjectileTracking : MonoBehaviour
 {
-    [Tooltip("Maximum degrees per second the trajectory bends toward the target. Small = a slight curve.")]
+    [Tooltip("Graus per segon màxims que la trajectòria es doblega cap a l'objectiu. Petit = una corba lleugera.")]
     [SerializeField] float turnSpeed = 20f;
-    [Tooltip("Rotate the sprite to face its travel direction (sprite up = velocity).")]
+    [Tooltip("Gira el sprite perquè miri cap a la direcció del moviment (la part de dalt del sprite = la velocitat).")]
     [SerializeField] bool faceTravelDirection = true;
 
     Rigidbody2D rb;
@@ -22,6 +20,7 @@ public class ProjectileTracking : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    // El BombLauncher crida aquest mètode just després de llançar la bomba per dir-li quin objectiu ha de perseguir.
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
@@ -38,11 +37,13 @@ public class ProjectileTracking : MonoBehaviour
         if (speed < Mathf.Epsilon)
             return;
 
-        // Direction we'd ideally travel, then bend the current velocity toward it
-        // by at most turnSpeed degrees this step, keeping the original speed.
-        Vector2 desired = ((Vector2)target.position - rb.position).normalized * speed;
-        float maxRadians = turnSpeed * Mathf.Deg2Rad * Time.fixedDeltaTime;
-        Vector2 steered = Vector3.RotateTowards(velocity, desired, maxRadians, 0f);
+        // TODO: Gira la velocitat cap a l'objectiu mantenint la mateixa rapidesa.
+        //   - La direcció cap a l'objectiu és: (Vector2)target.position - rb.position
+
+        //   - Gira 'velocity' cap a aquesta direcció amb Vector3.RotateTowards, com a molt 'turnSpeed' graus aquest pas (passa graus a radians amb Mathf.Deg2Rad i multiplica per Time.fixedDeltaTime).
+
+        //   Substitueix la línia de sota pel resultat del gir.
+        Vector2 steered = velocity;
 
         rb.linearVelocity = steered.normalized * speed;
 

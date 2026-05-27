@@ -46,12 +46,10 @@ namespace Ship8
 
         IEnumerator DestroyWhenComplete()
         {
-            // Wait one frame for the (instant) transition out of Idle into the
-            // Explosion state so the state info below reports the explosion clip.
+            // Wait one frame for the (instant) transition out of Idle into the Explosion state so the state info below reports the explosion clip.
             yield return null;
 
-            // The Explosion state has no exit transition, so the explosion has
-            // finished once its clip has played to the end.
+            // The Explosion state has no exit transition, so the explosion has finished once its clip has played to the end.
             while (animator != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
                 yield return null;
 
