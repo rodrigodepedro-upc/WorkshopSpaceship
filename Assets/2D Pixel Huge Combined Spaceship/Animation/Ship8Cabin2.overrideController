@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Ship8Cabin2
+  m_Controller: {fileID: 9100000, guid: 0b3828d6deb4977428143013bc1e0226, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d09cca31db577aa4a99134f1e04e8696, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7ae1eedbc0d5e3045a0eef09893274cf, type: 2}

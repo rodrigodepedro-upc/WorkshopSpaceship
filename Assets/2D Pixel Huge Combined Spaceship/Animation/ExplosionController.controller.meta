@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0b3828d6deb4977428143013bc1e0226
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 133397
+  packageName: 2D Pixel Huge Combined Spaceship
+  packageVersion: 1.0
+  assetPath: Assets/2D Pixel Huge Combined Spaceship/Animation/ExplosionController.controller
+  uploadId: 279527

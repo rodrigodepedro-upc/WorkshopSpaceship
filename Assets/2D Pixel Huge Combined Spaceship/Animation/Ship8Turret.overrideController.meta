@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 61ec32366a64deb4da00876b6df8ece4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 133397
+  packageName: 2D Pixel Huge Combined Spaceship
+  packageVersion: 1.0
+  assetPath: Assets/2D Pixel Huge Combined Spaceship/Animation/Ship8Turret.overrideController
+  uploadId: 279527

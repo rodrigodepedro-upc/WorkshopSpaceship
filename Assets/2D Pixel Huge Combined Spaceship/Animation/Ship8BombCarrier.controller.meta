@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d61aa0ab8104a0d4195e143db1e95c6d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 133397
+  packageName: 2D Pixel Huge Combined Spaceship
+  packageVersion: 1.0
+  assetPath: Assets/2D Pixel Huge Combined Spaceship/Animation/Ship8BombCarrier.controller
+  uploadId: 279527
